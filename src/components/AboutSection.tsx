@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { SectionHeader } from "./ServicesSection";
 import { Users, Star, Clock, Award } from "lucide-react";
@@ -42,13 +42,15 @@ export function AboutSection() {
               durabilidade. Cada detalhe é tratado com precisão e dedicação — porque você merece o melhor.
             </p>
             <div>
-              <Button
-                asChild
-                variant="outline"
-                className="rounded-none h-11 px-9 text-[11px] tracking-[0.2em] uppercase border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              <a
+                href="#agendar"
+                className={buttonVariants({
+                  variant: "outline",
+                  className: "rounded-none h-11 flex items-center justify-center px-9 text-[11px] tracking-[0.2em] uppercase border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                })}
               >
-                <a href="#agendar">Agendar Agora</a>
-              </Button>
+                Agendar Agora
+              </a>
             </div>
           </div>
 

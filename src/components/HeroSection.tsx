@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ChevronDown } from "lucide-react";
 
@@ -59,19 +59,23 @@ export function HeroSection() {
 
         {/* CTAs */}
         <div className="anim-5 flex flex-col sm:flex-row items-center gap-3 mt-10">
-          <Button
-            asChild
-            className="rounded-none h-11 px-9 text-[11px] tracking-[0.22em] uppercase bg-primary text-primary-foreground hover:opacity-90 hover:bg-primary"
+          <a
+            href="#agendar"
+            className={buttonVariants({
+              className: "rounded-none h-11 px-9 text-[11px] tracking-[0.22em] uppercase bg-primary text-primary-foreground hover:opacity-90 hover:bg-primary"
+            })}
           >
-            <a href="#agendar">Agendar Horário</a>
-          </Button>
-          <Button
-            asChild
-            variant="outline"
-            className="rounded-none h-11 px-9 text-[11px] tracking-[0.22em] uppercase border-border text-muted-foreground hover:border-primary hover:text-primary"
+            Agendar Horário
+          </a>
+          <a
+            href="#servicos"
+            className={buttonVariants({
+              variant: "outline",
+              className: "rounded-none h-11 px-9 text-[11px] tracking-[0.22em] uppercase border-border text-muted-foreground hover:border-primary hover:text-primary"
+            })}
           >
-            <a href="#servicos">Ver Serviços</a>
-          </Button>
+            Ver Serviços
+          </a>
         </div>
       </div>
 

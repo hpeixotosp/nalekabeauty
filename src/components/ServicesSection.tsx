@@ -10,7 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { Wand2, Sparkles, RefreshCw, Scissors } from "lucide-react";
@@ -134,13 +134,15 @@ export function ServicesSection() {
                     <span className="text-[10px] text-muted-foreground">{s.duration}</span>
                     <span className="text-xs font-medium text-primary">{s.price}</span>
                   </div>
-                  <Button
-                    asChild
-                    variant="ghost"
-                    className="h-auto p-0 text-[10px] tracking-[0.2em] uppercase text-muted-foreground hover:text-primary rounded-none"
+                  <a
+                    href="#agendar"
+                    className={buttonVariants({
+                      variant: "ghost",
+                      className: "h-auto p-0 inline-flex items-center text-[10px] tracking-[0.2em] uppercase text-muted-foreground hover:text-primary rounded-none"
+                    })}
                   >
-                    <a href="#agendar">Agendar →</a>
-                  </Button>
+                    Agendar →
+                  </a>
                 </CardFooter>
               </Card>
             );
